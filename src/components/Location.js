@@ -7,7 +7,7 @@ export default class Location extends Component {
             <Card>
                 <Card.Body>
                     <Card.Title>{this.props.renderLocation.display_name}</Card.Title>
-                    <Card.Img />
+                    <Card.Img src='' />
                     <Card.Text>
                         {(this.props.renderLocation.lat)}, {(this.props.renderLocation.lon)}
                     </Card.Text>

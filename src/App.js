@@ -9,14 +9,18 @@ export default class App extends Component {
     super(props)
     this.state = {
       locationQuery: '',
-      renderLocation: {}
+      renderLocation: {},
+      mapLocation: {
+        lat: '',
+        lon: ''
+      }
     }
   }
 
   getLocation = async () => {
     let result = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_PW}&q=${this.state.locationQuery}&format=json`);
-    this.setState({ renderLocation: result.data[0] })
-    console.log(this.state.renderLocation);
+    this.setState({ renderLocation: result.data[0], mapLocation: { lat: result.data[0].lat, lon: result.data[0].lon } })
+    console.log(this.state.renderLocation, this.state.mapLocation);
   }
 
   handleSubmit = (e) => {
@@ -28,7 +32,7 @@ export default class App extends Component {
     return (
       <div>
         <Header handleSubmit={this.handleSubmit} />
-        <Main renderLocation={this.state.renderLocation} />
+        <Main renderLocation={this.state.renderLocation} renderMap={this.state.mapLocation} />
         <Footer />
       </div>
     )
