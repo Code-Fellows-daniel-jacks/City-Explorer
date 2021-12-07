@@ -5,9 +5,13 @@ export default class Main extends Component {
     render() {
         return (
             <Card>
-                {this.props.renderLocation.display_name}
-                {this.props.renderLocation.lat}
-                {this.props.renderLocation.lon}
+                <Card.Body>
+                    <Card.Title>{this.props.renderLocation.display_name}</Card.Title>
+                    <Card.Img />
+                    <Card.Text>
+                        {this.props.renderLocation.lat}, {this.props.renderLocation.lon}
+                    </Card.Text>
+                </Card.Body>
             </Card>
         )
     }
