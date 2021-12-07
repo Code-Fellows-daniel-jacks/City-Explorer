@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* SCSS HEX */
+$heliotrope-gray: #ab9aa4ff;
+$green-sheen: #79bcb8ff;
+$prussian-blue: #172a3aff;
+$burnt-sienna: #de6b48ff;
+$middle-yellow-red: #e5b181ff;
+
+body {
+    background-image: linear-gradient(to right, rgba(216, 110, 44, 0.25),rgba(4,9,30,0.38)), url('/assets/beach-image.jpg');
+    background-position: 50% 15%;
+}
+.search {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+    .input {
+        display: flex;
+    }
+    button {
+        border: 1px solid $middle-yellow-red;
+        background-color: $green-sheen;
+        color: black;
+        &:hover {
+            border: 1px solid $prussian-blue;
+            background-color: $burnt-sienna;
+        }
+    }
+    h2 { 
+        font-size: 2.33rem;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+}
+
+.location-card {
+    width: 38rem;
+    margin: auto;
+    background-color: $prussian-blue;
+    color: snow;
+    font-size: 1.5em;
+    border: .5px solid $burnt-sienna;
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+.footer {
+    display: inline;
+    position: absolute;
+    bottom: 2.5%;
+    right: 2.5%;
+    color: snow;
+}
+
+
+
+
+
+
+
