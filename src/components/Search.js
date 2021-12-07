@@ -14,10 +14,12 @@ export default class Search extends Component {
         return (
             <Form onSubmit={this.props.handleSubmit}>
                 <Form.Group>
-                    <Form.Label>City you'd like to explore!</Form.Label>
-                    <Form.Control type='text' placeholder='city name here' name='city' />
+                    <Form.Label><h2>Enter a City You'd Like to Explore</h2></Form.Label>
                 </Form.Group>
-                <Button type='submit'>Explore!</Button>
+                <Form.Group className='input'>
+                    <Form.Control type='text' placeholder='city name here' name='city' />
+                    <Button type='submit'>Explore!</Button>
+                </Form.Group>
             </Form>
         )
     }

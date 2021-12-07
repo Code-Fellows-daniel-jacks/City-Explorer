@@ -3,8 +3,8 @@ import React, { Component } from "react";
 export default class Footer extends Component {
     render() {
         return (
-            <div>
-                this is footer
+            <div className='footer'>
+                Author: Daniel Jackson
             </div>
         )
     }

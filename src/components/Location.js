@@ -4,12 +4,12 @@ import Card from 'react-bootstrap/Card'
 export default class Location extends Component {
     render() {
         return (
-            <Card>
+            <Card className='location-card'>
                 <Card.Body>
-                    <Card.Title>{this.props.renderLocation.display_name}</Card.Title>
-                    <Card.Img src='' />
+                    <Card.Title><h3>{this.props.renderLocation.display_name}</h3></Card.Title>
+                    <Card.Img src={this.props.mapImage} />
                     <Card.Text>
-                        {(this.props.renderLocation.lat)}, {(this.props.renderLocation.lon)}
+                        Latitude: {(this.props.renderLocation.lat)}, Longitude: {(this.props.renderLocation.lon)}
                     </Card.Text>
                 </Card.Body>
             </Card>

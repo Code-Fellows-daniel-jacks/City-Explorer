@@ -5,7 +5,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div className='search'>
                 <Search handleSubmit={this.props.handleSubmit} />
             </div>
         )
