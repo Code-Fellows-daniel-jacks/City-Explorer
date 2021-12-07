@@ -3,10 +3,12 @@ import Location from './Location.js';
 
 export default class Main extends Component {
     render() {
-        {
-            return (
+        return (
+            <>
+                {this.props.renderLocation.display_name &&
                 <Location renderLocation={this.props.renderLocation} mapImage={this.props.mapImage} />
-            )
-        }
+                }
+            </>
+        )
     }
 }
