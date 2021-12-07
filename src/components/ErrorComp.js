@@ -17,7 +17,7 @@ export default class Error extends Component {
                     keyboard={false}
                 >
                     <Modal.Header closeButton>
-                        <Modal.Title>ERROR</Modal.Title>
+                        <Modal.Title>ERROR: 404</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         Error: invalid location name
