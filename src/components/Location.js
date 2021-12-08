@@ -6,10 +6,10 @@ export default class Location extends Component {
         return (
             <Card className='location-card'>
                 <Card.Body>
-                    <Card.Title><h3>{this.props.renderLocation.display_name}</h3></Card.Title>
+                    <Card.Title><h3>{this.props.searchLocation.display_name}</h3></Card.Title>
                     <Card.Img src={this.props.mapImage} />
                     <Card.Text>
-                        Latitude: {(this.props.renderLocation.lat)}, Longitude: {(this.props.renderLocation.lon)}
+                        Latitude: {(this.props.searchLocation.lat)}, Longitude: {(this.props.searchLocation.lon)}
                     </Card.Text>
                 </Card.Body>
             </Card>
