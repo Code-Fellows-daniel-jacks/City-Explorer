@@ -10,7 +10,7 @@ export default class Search extends Component {
                     <Form.Label><h2>Enter a City You'd Like to Explore</h2></Form.Label>
                 </Form.Group>
                 <Form.Group className='input'>
-                    <Form.Control type='text' placeholder='city name here' name='city' />
+                    <Form.Control type='text' placeholder='City Name' name='city' />
                     <Button type='submit'>Explore!</Button>
                 </Form.Group>
             </Form>
