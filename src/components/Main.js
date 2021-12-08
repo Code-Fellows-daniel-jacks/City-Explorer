@@ -11,7 +11,10 @@ export default class Main extends Component {
                 }
                 <div className='weather-tabs'>
                     {this.props.weather[0] &&
-                        this.props.weather.map((_, index) => <WeatherWidget key={this.props.weather[index].date} weather={this.props.weather[index]} />)
+                        <>
+                            <h1>Weather Data:</h1>
+                            {this.props.weather.map((_, index) => <WeatherWidget key={this.props.weather[index].date} weather={this.props.weather[index]} />)}
+                        </>
                     }
                 </div>
             </>

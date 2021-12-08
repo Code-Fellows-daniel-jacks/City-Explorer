@@ -45,6 +45,7 @@ export default class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({ weather: [] });
     this.setState({ locationQuery: e.target.city.value }, this.getLocation);
   }
 
