@@ -36,14 +36,13 @@ export default class App extends Component {
   }
 
   getWeatherData = async () => {
-    let city = this.state.searchLocation.display_name.split(',')[0];
-    let url = `${process.env.REACT_APP_SERVER_URL}/weather-data?city_name=${city}`
-    // ?lat=${this.state.mapLocation.lat} ?lon=${this.state.mapLocation.lon}
+    let url = `${process.env.REACT_APP_SERVER_URL}/weather-data?lat=${this.state.mapLocation.lat}&lon=${this.state.mapLocation.lon}`
+    console.log(url);
     try {
       let weatherData = await axios.get(url);
       this.setState({ weather: weatherData.data });
     } catch (e) {
-      this.setState({ inputError: e });
+      console.log(e);
     }
   }
 
