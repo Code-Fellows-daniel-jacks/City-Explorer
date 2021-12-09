@@ -51,7 +51,23 @@ body {
     position: absolute;
     right: 5%;
     bottom: 13rem;
+    height: 50%;
     width: 14%;
+    overflow: auto;
+    div {
+        margin-top: .5rem;
+        background-color: $prussian-blue;
+        color: snow;
+        font-size: 1.1em;
+    }
+}
+
+.movie-carousel {
+    position: absolute;
+    left: 5%;
+    bottom: 13rem;
+    width: 20%;
+    height: 45rem;
     overflow: auto;
     div {
         margin-top: .5rem;
