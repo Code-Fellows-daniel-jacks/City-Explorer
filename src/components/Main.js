@@ -29,7 +29,7 @@ export default class Main extends Component {
                         <div className='movie'>
                             <h1>{cityName} Movies:</h1>
                             <Carousel fade className='movie-carousel'>
-                                {this.props.movies.map((movie) => <Carousel.Item key={movie.title} className='movie-item'><MovieWidget movie={movie} /></Carousel.Item>)}
+                                {this.props.movies.map((movie, idx) => <Carousel.Item key={movie.title + idx} className='movie-item'><MovieWidget movie={movie} /></Carousel.Item>)}
                             </Carousel>
                         </div>
                     }
