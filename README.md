@@ -32,3 +32,9 @@ This application uses React, React Bootstrap (for importing/styling prebuilt com
 - [background image of site](https://unsplash.com/photos/8Ogfqvw15Rg), found on https://unsplash.com/, and shot by [Joel Vodell](https://unsplash.com/@joelvodell).
 - Michael Milsap - helping me get over the 'rendering the map' hump of this project. 
 - Sara Russert - for being very informative about GET method and implementing the data from the return value, as well as just being a phenomenal instructor. 
+
+## Pics For Request/Data Flow
+
+![first data flow](./README-images/datamapday1.png) <br />
+![second data flow](./README-images/datamapday2.png) <br />
+![third data flow](./README-images/datamapday3.png)
