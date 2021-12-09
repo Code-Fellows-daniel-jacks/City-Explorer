@@ -18,7 +18,8 @@ export default class App extends Component {
       mapImage: '',
       inputError: '',
       showModal: false,
-      weather: []
+      weather: [],
+      movies: []
     }
   }
 
@@ -26,7 +27,7 @@ export default class App extends Component {
     try {
       let result = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ_PW}&q=${this.state.locationQuery}&format=json`);
       this.setState({ searchLocation: result.data[0], mapLocation: { lat: result.data[0].lat, lon: result.data[0].lon } }, this.getWeatherData);
-
+      this.getMovieData();
       let mapResult = (`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_IQ_PW}&center=${this.state.mapLocation.lat},${this.state.mapLocation.lon}&zoom=12&size=1000x1000&format=jpg&maptype=roadmap`);
       this.setState({ mapImage: mapResult });
 
@@ -43,6 +44,14 @@ export default class App extends Component {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  getMovieData = async () => {
+    let city = this.state.searchLocation.display_name.split(',')[0].toLowerCase();
+    let url = `${process.env.REACT_APP_SERVER_URL}/movie-data?query=${city}`
+    let movieData = await axios.get(url);
+    console.log(movieData.data);
+    this.setState({ movies: movieData.data });
   }
 
   handleSubmit = (e) => {
@@ -63,7 +72,7 @@ export default class App extends Component {
     return (
       <>
         <Header handleSubmit={this.handleSubmit} />
-        <Main searchLocation={this.state.searchLocation} mapImage={this.state.mapImage} weather={this.state.weather} />
+        <Main searchLocation={this.state.searchLocation} mapImage={this.state.mapImage} weather={this.state.weather} movies={this.state.movies} />
         <Footer />
         <ErrorComp handleCloseModal={this.handleCloseModal} showModal={this.state.showModal} inputError={this.state.inputError} />
       </>
