@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Card from 'react-bootstrap/Card'
+import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import defaultMovie from '../assets/default-movie.jpg';
 
 export default class WeatherWidget extends Component {
     render() {
@@ -8,7 +9,7 @@ export default class WeatherWidget extends Component {
             <Card>
                 <Card.Img
                     variant="top"
-                    src={movie.length > 40 ? movie : 'https://via.placeholder.com/212x300'}
+                    src={movie.length > 40 ? movie : defaultMovie}
                 />
                 <Card.Body>
                     <Card.Title>{this.props.movie.title}</Card.Title>
