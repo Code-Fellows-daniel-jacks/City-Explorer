@@ -27,9 +27,12 @@ This application uses React, React Bootstrap (for importing/styling prebuilt com
 12-07-2021 10:00am - Application is rendering error modal if the input location is invalid <br />
 12-07-2021 4:38pm - Application is able to operate on local host, and GET from server on local host, and render weather data accordingly <br />
 12-08-2021 7:08am - Updates README file to be a lot more precise in giving instructions.
+12-09-2021 8:13am - Updates site to include carousel for movie images.
+12-09-2021 9:56am - Includes footer with links for both GitHub and LinkedIn. 
 
 ## Credit and Collaborations
 - [background image of site](https://unsplash.com/photos/8Ogfqvw15Rg), found on https://unsplash.com/, and shot by [Joel Vodell](https://unsplash.com/@joelvodell).
+- [Site Icon](https://www.flaticon.com/free-icon/earth_44386), from https://www.flaticon.com.
 - Michael Milsap - helping me get over the 'rendering the map' hump of this project. 
 - Sara Russert - for being very informative about GET method and implementing the data from the return value, as well as just being a phenomenal instructor. 
 
