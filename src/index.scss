@@ -6,6 +6,7 @@ $green-sheen: #79bcb8ff;
 $prussian-blue: #172a3aff;
 $burnt-sienna: #de6b48ff;
 $middle-yellow-red: #e5b181ff;
+$fc-primary: snow;
 
 body {
     background-image: linear-gradient(to right, rgba(216, 110, 44, 0.25),rgba(4,9,30,0.38)), url('/assets/beach-image.jpg');
@@ -39,7 +40,7 @@ body {
     width: 38rem;
     margin: auto;
     background-color: $prussian-blue;
-    color: snow;
+    color: $fc-primary;
     font-size: 1.2em;
     border: .5px solid $burnt-sienna;
     h3 {
@@ -56,14 +57,16 @@ body {
             color: $prussian-blue;
             font-size: 2rem;
             margin: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-align: center;
         }
         .weather-tabs {
         height: 40rem;
         overflow: auto;
         div {
-            margin-top: .5rem;
+            margin-bottom: .5rem;
             background-color: $prussian-blue;
-            color: snow;
+            color: $fc-primary;
             font-size: 1.1em;
         }
     }
@@ -77,12 +80,15 @@ body {
     h1 {
         color: $prussian-blue;
         font-size: 2rem;
+        margin: 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: center;
     }
     .movie-carousel {
         .movie-item {
             height: 40rem;
             overflow: auto;
-            color: snow;
+            color: $fc-primary;
             * {
                 background-color: $prussian-blue;
             }
@@ -91,9 +97,24 @@ body {
 }
 
 .footer {
-    display: inline;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
+    font-size: larger;
+    width: 17.7rem;
     bottom: 2.5%;
     right: 2.5%;
-    color: snow;
+    color: $fc-primary;
+    div{
+        width: 5rem;
+        display: flex;
+        justify-content: space-around;
+        a {
+        text-decoration: none;
+        color: $fc-primary;
+        &:hover{
+            color: $green-sheen;
+        }
+        }
+    }
 }
