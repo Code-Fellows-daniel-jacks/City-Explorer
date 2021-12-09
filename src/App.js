@@ -50,7 +50,6 @@ export default class App extends Component {
     let city = this.state.searchLocation.display_name.split(',')[0].toLowerCase();
     let url = `${process.env.REACT_APP_SERVER_URL}/movie-data?query=${city}`
     let movieData = await axios.get(url);
-    console.log(movieData.data);
     this.setState({ movies: movieData.data });
   }
 
