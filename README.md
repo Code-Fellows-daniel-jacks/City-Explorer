@@ -40,4 +40,5 @@ This application uses React, React Bootstrap (for importing/styling prebuilt com
 
 ![first data flow](./README-images/datamapday1.png) <br />
 ![second data flow](./README-images/datamapday2.png) <br />
-![third data flow](./README-images/datamapday3.png)
+![third data flow](./README-images/datamapday3.png) <br />
+![fourth data flow](./README-images/datamapday4.png)

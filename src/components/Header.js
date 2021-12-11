@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Search from './Search.js'
+import Searchbar from './Searchbar.js'
 
 export default class Header extends Component {
 
     render() {
         return (
             <div className='search'>
-                <Search handleSubmit={this.props.handleSubmit} />
+                <Searchbar handleSubmit={this.props.handleSubmit} />
             </div>
         )
     }
