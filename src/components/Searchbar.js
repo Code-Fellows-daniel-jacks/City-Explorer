@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-export default class Search extends Component {
+export default class Searchbar extends Component {
     render() {
         return (
             <Form onSubmit={this.props.handleSubmit}>
